@@ -9,3 +9,9 @@ def homi(req):
 def viewcourse(req,cid):
     course=Course.objects.get(id=cid)
     return render(req,'vcourse.html',{'courses':course})
+
+def contact(req):
+     return render(req,'contact.html')
+
+def placements(req):
+     return render(req,'placement.html')
