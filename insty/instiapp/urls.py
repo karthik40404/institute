@@ -6,4 +6,5 @@ urlpatterns = [
     path('viewcourse/<cid>',views.viewcourse,name='viewcourse'),
     path('contact',views.contact),
     path('placement',views.placements),
+    path('smessage',views.sendm),
 ]

@@ -60,30 +60,15 @@
                             Courses
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">MERN</a></li>
-                            <li><a class="dropdown-item" href="#">UI/UX</a></li>
-                            <li><a class="dropdown-item" href="#">FLUTTER</a></li>
-                            <li class="dropdown">
-                                <a class="dropdown-item dropdown-toggle" href="#">FULLSTACK WEBDEV</a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">PYTHON</a></li>
-                                    <li><a class="dropdown-item" href="#">PHP</a></li>
-                                    <li><a class="dropdown-item" href="#">RUBY</a></li>
-                                </ul>
-                            </li>
+                            {% for course in courses %}
+                            <li><a class="dropdown-item" href="viewcourse/{{course.id}}">{{ course.cname }}</a></li>
+                            {% endfor %}                         
                         </ul>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="contact">Contact</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Careers</a>
-                    </li>
                 </ul>
-                <form class="d-flex me-5" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-info me-3" type="submit">Search</button>
-                </form>
             </div>
         </div>
     </nav>

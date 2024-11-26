@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from .models import *
 # Create your views here.
 
@@ -15,3 +15,14 @@ def contact(req):
 
 def placements(req):
      return render(req,'placement.html')
+
+def sendm(req):
+     if req.method=='POST':
+          name=req.POST['name']
+          email=req.POST['email']
+          message=req.POST['message']
+          data=Message.objects.create(name=name,email=email,message=message)
+          data.save()
+          return redirect(contact)
+     else:
+          return render(req,'contact.html')
