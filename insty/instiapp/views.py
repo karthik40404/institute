@@ -26,3 +26,6 @@ def sendm(req):
           return redirect(contact)
      else:
           return render(req,'contact.html')
+
+def about(req):
+     return render(req,'aboutus.html')

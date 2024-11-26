@@ -7,4 +7,5 @@ urlpatterns = [
     path('contact',views.contact),
     path('placement',views.placements),
     path('smessage',views.sendm),
+    path('about',views.about),
 ]
